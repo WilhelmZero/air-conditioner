@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/about/about",
+    "pages/fan/fan",
+    "pages/profile/profile",
+    "pages/webpage/webpage"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "随身小空调",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor": "#077dff",
+    "list": [
+        {
+            "pagePath": "pages/index/index",
+            "text": "小空调",
+            "iconPath": "./pages/static/img/kt0.png",
+            "selectedIconPath": "./pages/static/img/kt1.png"
+        },
+        {
+            "pagePath": "pages/fan/fan",
+            "text": "小风扇",
+            "iconPath": "./pages/static/img/fs0.png",
+            "selectedIconPath": "./pages/static/img/fs1.png"
+        },
+        {
+            "pagePath": "pages/profile/profile",
+            "text": "关于",
+            "iconPath": "./pages/static/img/sf0.png",
+            "selectedIconPath": "./pages/static/img/sf1.png"
+        }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

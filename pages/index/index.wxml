@@ -1,0 +1,114 @@
+<!-- 外部大盒子 -->
+<view class="main">
+<!-- 标题盒子 -->
+  <!-- <view class="box1">
+    随身小空调
+  </view> -->
+
+  <!-- 提示盒子 -->
+  <!-- <view class="tag">
+  🧊Tip: 心静自然凉！
+  </view> -->
+
+  <view class="kongtiao {{oppn?'kongtiao-on':'kongtiao-off'}}">
+    <view class="jieneng">
+      <view class="diyipai">
+        <view class="dian"></view>
+        <view class="dian"></view>
+        <view class="dian"></view>
+        <view class="dian"></view>
+        <view class="dian"></view>
+        <view class="dian"></view>
+      </view>
+      <view class="dierpai">
+        <view class="tiao1 tiao"></view>
+        <view class="tiaoArror tiao"></view>
+        <view class="tiao2 tiao"></view>
+        <view class="tiao3 tiao"></view>
+        <view class="tiao4 tiao"></view>
+        <view class="tiao5 tiao"></view>
+      </view>
+    </view>
+
+      <!-- 温度区 -->
+    <view class="temp" style="opacity: {{oppn?1:0}};">
+    {{num}}℃
+    </view>
+    <!-- 扫风区 -->
+    <!-- <view class="feng" wx:if="{{showFeng == true}}">自动扫风</view> -->
+    <!-- 制冷 -->
+    <view class="mode" style="opacity: {{oppn?1:0}};">{{mode}}</view>
+    <!-- 定数关闭 -->
+    <view class="dingshi" wx:if="{{showTime == true}}">自动关闭</view>
+
+    <view class="xian {{oppn?'xian-on':'xian-off'}}" ></view>
+
+    <view class="kaiguan" wx:if="{{oppn == true}}"></view>
+  </view>
+  
+  <!-- 三条竖线 -->
+  <view class="shuxian" style="opacity: {{oppn?1:0}};color: {{winColor}};">
+        <view class="first">|</view>
+        <view class="second">|</view>
+        <view class="three">|</view>
+  </view>
+
+  <!-- 独立遥控器 -->
+  <!-- <view class="duli">独立遥控器</view> -->
+
+  <view class='btns'>
+<!--   
+    <button bindtap="saofeng" class="btn1" style="width:65px;height:65px;border-radius: 50%;margin-top: 200px;color:	#F4A460">扫风</button>
+
+    <button bindtap="btnClose" class="btn1" style="width:65px;height:65px;margin-left: -30px;border-radius: 50%;margin-top: 200px;color:		#FF6347">开关</button>
+    <button bindtap="zidongguanbi" class="btn1" style="width:65px;height:65px;margin-left: -30px;border-radius: 50%;margin-top: 200px;	color:	#D02090">
+    定时</button>
+     -->
+    <view bindtap="zhileng" class="cicle-button" style="background-color: #1976d2;">
+      <image src="../static/img/cold.png" mode="aspectFit"/>
+    </view>
+    <view bindtap="btnClose" class="cicle-button" style="background-color: {{oppn?'#d73d39':'#43a047'}};">
+      <image src="../static/img/switch.png" mode="aspectFit"/>
+    </view>
+    <view bindtap="zhire" class="cicle-button" style="background-color: #ffa500;">
+      <image src="../static/img/hot.png" mode="aspectFit"/>
+    </view>
+    
+
+  </view>
+  <view class="btns2">
+
+    <view bindtap="up" class="cicle-button" style="background-color: #ebebeb;">
+      <image src="../static/img/inc.png" mode="aspectFit"/>
+    </view>
+    
+    <view bindtap="down" class="cicle-button" style="background-color: #ebebeb;">
+      <image src="../static/img/dec.png" mode="aspectFit"/>
+    </view>
+  </view>
+  <!-- <button class="btn1" bindtap="up" style="width:65px;height:65px;border-radius: 50%;margin-top: 30px;color:		#4169E1;line-height:50px;font-size:20px">+</button>
+  <button class="btn1" bindtap="down" style="width:65px;height:65px;border-radius: 50%;margin-top: 30px;color:		#191970;line-height:50px;font-size:30px">-</button>
+     -->
+
+  
+
+</view>
+<view style="text-align: center;color: gray;">- ❄️随身小空调，环保节能！唯一缺点：没风 -</view>
+<button plain="true" type="primary" open-type="share" style="width: 90%;margin:50px auto">🍻给别人也装一台</button>
+<ad unit-id="adunit-dcd90e37713aa87a" ad-type="video" ad-theme="white"></ad>
+
+
+<cover-view class = "guideBackground" wx:if = "{{isTiptrue}}">  	       
+  <cover-view class = "guideInfo">    
+    <cover-view class = "guideText"> 点击右上角 </cover-view>    
+    <cover-view class = "curcleL"></cover-view>    
+    <cover-view class = "curcleM"></cover-view>    
+    <cover-view class = "curcleL"></cover-view>    
+    <cover-view class = "guideText"> 转发朋友圈 或 添加小程序 
+    </cover-view>
+  </cover-view>
+  	       
+  <cover-view class = "guideClose" bindtap = "closeGuide">    
+    <cover-view class = "closeText"> × </cover-view>  
+  </cover-view>
+</cover-view>

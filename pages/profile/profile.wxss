@@ -1,0 +1,17 @@
+/* pages/profile/profile.wxss */
+.info-container{
+  margin: 50rpx;
+  display: flex;
+}
+
+.info-container .avatar{
+  height: 100rpx;
+  width: 100rpx;
+  margin: 10rpx;
+  background-color: #ddd;
+  border-radius: 10rpx;
+}
+.info-container .nickname{
+  margin: 10rpx;
+  font-size: 36rpx;
+}

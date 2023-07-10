@@ -1,0 +1,17 @@
+<view class="profile-header">
+    <view class="info-container">
+        <image class="avatar" src="{{user.avatarUrl}}" />
+        <text class="nickname">{{user.nickname}}</text>
+    </view>
+</view>
+<mp-cells ext-class="my-cells" title="">
+    <mp-cell hover link bindtap="onClickSubscribe" footer="其实你很帅" value="关注公众号">
+        <image slot="title" src="../static/img/star.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </mp-cell>
+    <mp-cell hover link bindtap="onClickAbout" footer="" value="关于">
+        <image slot="title" src="../static/img/profile.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </mp-cell>
+</mp-cells>
+
+    <button type="primary" open-type="share" style="margin: 50px auto;">分享给朋友</button>
+    <view style="text-align: center;color: gray;">- 🙉“心诚则灵，心不诚则不灵” -</view>

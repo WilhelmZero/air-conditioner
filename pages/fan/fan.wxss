@@ -1,0 +1,258 @@
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+#fan {
+  position: absolute;
+  width: 16em;
+  height: 30em;
+  left: calc(50% - 8em);
+  top: 80rpx;
+  /* top: calc(50% - 15em); */
+  
+}
+
+.guard {
+  height: 16em;
+  width: 16em;
+  position: absolute;
+  z-index: 10;
+}
+
+.frame {
+  height: 16em;
+  width: 16em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 3px solid #000;
+  border-radius: 50%;
+}
+
+li[class^="cir"] {
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 50%;
+  z-index: 12;
+}
+
+.cir1 {
+  height: 14em;
+  width: 14em;
+  left: 1em;
+  top: 1em;
+}
+
+.cir2 {
+  height: 12em;
+  width: 12em;
+  left: 2em;
+  top: 2em;
+}
+
+.cir3 {
+  height: 10em;
+  width: 10em;
+  left: 3em;
+  top: 3em;
+}
+
+.cir4 {
+  height: 8em;
+  width: 8em;
+  left: 4em;
+  top: 4em;
+}
+
+.cir5 {
+  height: 6em;
+  width: 6em;
+  left: 5em;
+  top: 5em;
+}
+
+.cir6 {
+  height: 3em;
+  width: 3em;
+  left: 6.5em;
+  top: 6.5em;
+  background: radial-gradient(50% 30%, #222 0%, #000 100%);
+}
+
+li[class^="bar"] {
+  position: absolute;
+  border: 1px solid #000;
+  transform: rotate(45deg);
+  z-index: 11;
+}
+
+.bar1 {
+  height: 16em;
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+
+.bar2 {
+  width: 16em;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.blades {
+  height: 12em;
+  width: 12em;
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  z-index: 9;
+  
+  /* animation: blades 1s infinite linear; */
+}
+
+.blades li {
+  height: 6.5em;
+  width: 6.5em;
+  position: absolute;
+  border-radius: 0 50% 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/*扇叶*/
+.b1 {
+  top: 7em;
+  left: 2.75em;
+  transform: rotate(45deg);
+}
+
+.b2 {
+  top: 0.5em;
+  left: -1em;
+  transform: rotate(165deg);
+}
+
+.b3 {
+  top: 0.5em;
+  left: 6.5em;
+  transform: rotate(285deg);
+}
+
+/*底座*/
+.base {
+  height: 1em;
+  width: 10em;
+  position: absolute;
+  top: 29em;
+  left: 3em;
+  z-index: 5;
+  border-radius: 33%;
+  background: #222;
+  box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.base:after {
+  height: 20em;
+  width: 0.5em;
+  position: absolute;
+  top: -20em;
+  left: 4.75em;
+  z-index: -1;
+  content: '';
+  display: block;
+  box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(0deg, #111 0%, #212121 100%)
+}
+
+/* Animation 扇叶转动*/
+@keyframes blades {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1080deg);
+  }
+}
+page{
+  width: 100%;
+  height: 100%;
+}
+.btns{
+  position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    display: flex;
+
+  
+    font-size: 30px;
+    color: black;
+    font-family: 'Digital Numbers';
+}
+.cicle-button{
+  /* transition:all 50ms  ease-in; */
+  margin: 0px 20rpx;
+  border-radius: 50%;
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  box-shadow: 0px 5rpx 15rpx gray;
+
+
+  
+  position: relative;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+/* .cicle-button:hover{
+  width: 115rpx;
+  height: 115rpx;
+  box-shadow: 0px 5rpx 25rpx black;
+} */
+.cicle-button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+/* 按钮点击时触发波纹效果 */
+.cicle-button:active:after {
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+.cicle-button image{
+  margin: 0px auto;
+  width: 80rpx;
+  height: 80rpx;
+}
+.cicle-button image:hover{
+  
+  width: 75rpx;
+  height: 75rpx;
+}
+
+.num{
+  
+  color: gray;
+  /* color: #7FFF00; */
+  font-family: 'Digital Numbers';
+}

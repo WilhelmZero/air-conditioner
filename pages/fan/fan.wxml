@@ -1,0 +1,40 @@
+<view style="text-align: center;color: gray;">- 🎐便携小风扇，转速快！唯一缺点：还是没风 -</view>
+<view id="fan">
+  <view>
+    <ul class="guard">
+      <li class="frame"></li>
+      <li class="cir1"></li>
+      <li class="cir2"></li>
+      <li class="cir3"></li>
+      <li class="cir4"></li>
+      <li class="cir5"></li>
+      <li class="cir6"></li>
+      <li class="bar1"></li>
+      <li class="bar2"></li>
+    </ul>
+    <ul class="blades" style="animation: blades {{speed}}s infinite linear;">
+      <li class="b1"></li>
+      <li class="b2"></li>
+      <li class="b3"></li>
+    </ul>
+  </view>
+  <view class="base"></view>
+
+  
+
+</view>
+<view class='btns'>
+    <view bindtap="onChangeSpeed" data-speed="0" class="cicle-button" style="background-color: #fff;">
+      <text>0</text>
+    </view>
+    <view bindtap="onChangeSpeed" data-speed="3" class="cicle-button" style="background-color: #ddd;">
+      <text>1</text>
+    </view>
+    <view bindtap="onChangeSpeed" data-speed="2" class="cicle-button" style="background-color: #ddd;">
+      <text>2</text>
+    </view>
+    <view bindtap="onChangeSpeed" data-speed="1" class="cicle-button" style="background-color: #ddd;">
+      <text>3</text>
+    </view>
+  </view>
+

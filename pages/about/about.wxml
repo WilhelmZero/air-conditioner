@@ -1,0 +1,8 @@
+<!--pages/about/about.wxml-->
+<view>公众号：其实你很帅</view>
+<view>开源参考：</view>
+<view>https://github.com/YunYouJun/air-conditioner</view>
+<view>https://github.com/Niezeyu/wx-remote</view>
+<view>https://github.com/TobiZh/fan</view>
+<view>https://www.iconfont.cn/user/detail?spm=a313x.7781069.1998910419.d9bd4f23f&uid=227955&nid=rlxYfRxsjVmo</view>
+<ad unit-id="adunit-8c192d5c74f0d8b0" ad-type="video" ad-theme="white"></ad>
